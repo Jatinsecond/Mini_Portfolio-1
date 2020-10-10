@@ -1,0 +1,487 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/b0667fb8b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <title>Kapil Sharma</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    #header-img {
+        width: 70px;
+        height: 70px;
+        border: 2px solid #ff3333;
+        border-radius: 100%;
+        box-shadow: 0px 0px 4px 0px #888888;
+        margin: 20px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header-icon {
+        font-size: 40px;
+        color: #c2b9b8;
+        margin: 30px;
+        cursor: pointer;
+    }
+
+    #header-text {
+        font-size: 27px;
+        color: white;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.97);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        display: flex;
+        position: relative;
+        top: 20%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 50px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+        color: white;
+    }
+
+    .closebtn {
+        float: right;
+        margin: 20px;
+    }
+
+    #center-text1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+    }
+
+    #center-text2 {
+        display: flex;
+        justify-content: center;
+        color: white;
+        letter-spacing: 10px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    #center-text3 {
+        display: flex;
+        justify-content: center;
+        color: grey;
+        letter-spacing: 5px;
+        margin-top: 5px;
+        margin-bottom: 270px;
+    }
+
+    #me {
+        font-size: 60px;
+        margin: 50px;
+    }
+
+
+    #intro {
+        margin: 20px;
+        margin-left: 51px;
+        font-size: 20px;
+        letter-spacing: 10px;
+        color: gray;
+    }
+
+    #self-intro {
+        margin: 50px;
+        text-align: justify;
+        font-size: 18px;
+        color: white;
+    }
+
+    #btn {
+        background-color: white;
+        width: 130px;
+        margin-left: 50px;
+        color: green;
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    #btn:hover {
+        box-shadow: 0px 0px 4px 0px #888888;
+    }
+
+    #social-media {
+        margin: 10px;
+        margin-left: 50px;
+    }
+
+    #what-i-do {
+        font-size: 25px;
+        margin-top: 150px;
+        letter-spacing: 5px;
+    }
+
+    #MY-SERVICES {
+        color: white;
+        font-size: 45px;
+        letter-spacing: 5px;
+        margin-bottom: 80px;
+    }
+
+    .service-title {
+        color: white;
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    #MY-SERVICES2 {
+        color: white;
+        font-size: 35px;
+        letter-spacing: 5px;
+        margin-bottom: 100px;
+        margin-top: 200px;
+    }
+
+    #counter {
+        color: deepskyblue;
+        font-size: 50px;
+    }
+
+    #contact-us {
+        display: flex;
+        justify-content: center;
+        font-size: 35px;
+        color: white;
+        font-weight: 500;
+        margin-top: 200px;
+    }
+
+    #email {
+        display: flex;
+        justify-content: center;
+        font-size: 30;
+        color: white;
+        margin-top: 10px;
+    }
+
+    #all-rights {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    #clients {
+        margin-top: 50px;
+        font-size: 50px;
+        color: deepskyblue;
+    }
+
+    #clients2 {
+        font-size: 30px;
+        letter-spacing: 8px;
+    }
+
+    @media (max-width: 575.98px) {
+        #header-icon {
+            font-size: 33px;
+            color: #c2b9b8;
+            margin: 28px;
+            cursor: pointer;
+        }
+
+        #header-text {
+            font-size: 16px;
+            color: white;
+        }
+
+        #header-img {
+            width: 63px;
+            height: 62px;
+            border: 2px solid #ff3333;
+            border-radius: 100%;
+            box-shadow: 0px 0px 4px 0px #888888;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h5 {
+            font-size: 10px;
+            letter-spacing: 3px;
+        }
+
+        #me {
+            font-size: 43px;
+
+        }
+
+        #intro {
+            letter-spacing: 3px;
+        }
+
+        #email {
+            font-size: 24px;
+        }
+
+        .overlay-content {
+            margin-left: 86px;
+        }
+
+        .overlay a {
+            font-size: 36px;
+
+        }
+
+        #self-intro {
+            font-size: 16px;
+
+        }
+
+        #MY-SERVICES {
+
+            font-size: 37px;
+        }
+
+        #MY-SERVICES2 {
+            font-size: 29px;
+        }
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <span id="header-text"><img src="Utkarsh-Piyush%20(2).jpg" id="header-img">Utkarsh Piyush</span>
+            <span onclick="openNav()" id="header-icon">&#9776;</span>
+        </div>
+        <div data-aos="zoom-in-up" data-aos-duration="3000">
+            <div id="center-text1">
+                <h3>HELLO I'AM</h3>
+            </div>
+        </div>
+        <div data-aos="zoom-in-up" data-aos-duration="3000">
+            <div id="center-text2">
+                <h1>Kapil sharma</h1>
+            </div>
+        </div>
+        <div data-aos="zoom-in-up" data-aos-duration="3000">
+            <div id="center-text3">
+                <h5>YOUNGEST DIGITAL Entrepreneur</h5>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-lg-6">
+                <div data-aos="fade-right" data-aos-duration="3000">
+                    <img src="Utkarsh-Piyush%20(2).jpg">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <br><br>
+                <span id="me">ABOUT ME</span>
+                <p id="intro">HI! I'M UTKARSH PIYUSH</p>
+                <p id="self-intro">I am utkarsh piyush and Started Digital Marketing at age of 14.I am from muzaffarpur.I make my own company sown Company thegurumedia.com sucessfull.I am learning new skills every day and started applying them for different projects.That’s how the journey started.In a short period of just 3 years, utkarsh is is very popular in his field. His hard work and passion for Digital Marketing are the reasons for his success.</p>
+                <a href="https://wa.me/918228846935"><button id="btn"><i class="fa fa-whatsapp" style="font-size:18px"> What's app</i></button></a>
+                <div id="social-media">
+                    <a href="https://www.facebook.com/utkarshpiyushh/"><span style="font-size: 2.5em; color: white">
+                            <i class="fab fa-facebook"></i>
+                        </span></a>
+                    <a href="https://instagram.com/utkarsh.piyush?igshid=fx8uvqq7k2xl"><span style="font-size: 2.5em; color: white">
+                            <i class="fab fa-instagram"></i>
+                        </span></a>
+                    <a href="https://twitter.com/UtkarshPiyush1?s=09"><span style="font-size: 2.5em; color: white">
+                            <i class="fab fa-twitter"></i>
+                        </span></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <center>
+            <div data-aos="zoom-in-up" data-aos-duration="2000">
+                <div id="what-i-do">WHAT I DO</div>
+            </div>
+        </center><br>
+        <center>
+            <div data-aos="zoom-in-up" data-aos-duration="2000">
+                <div id="MY-SERVICES">MY SERVICES</div>
+            </div>
+        </center>
+        <div class="row">
+            <div class="col-lg-4">
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <span style="font-size: 4em; color:deepskyblue">
+                            <i class="fas fa-mobile-alt"></i>
+                        </span>
+                    </div>
+                </center>
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <p class="service-title">Web&amp;Mobile App Development</p>
+                    </div>
+                </center>
+            </div>
+            <div class="col-lg-4">
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <span style="font-size: 4em; color:deepskyblue">
+                            <i class="fas fa-male"></i>
+                        </span></div>
+                </center>
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <p class="service-title">Influencer Marketing</p>
+                    </div>
+                </center>
+            </div>
+            <div class="col-lg-4">
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <span style="font-size: 4em; color:deepskyblue">
+                            <i class="fab fa-youtube"></i>
+                        </span></div>
+                </center>
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <p class="service-title">Youtube Marketing</p>
+                    </div>
+                </center>
+            </div>
+
+        </div>
+        <div style="margin: 50px;"></div>
+        <div class="row">
+            <div class="col-lg-4">
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <span style="font-size: 4em; color:deepskyblue">
+                            <i class="far fa-address-card"></i>
+                        </span></div>
+                </center>
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <p class="service-title">Online Reputation Mangement</p>
+                    </div>
+                </center>
+            </div>
+            <div class="col-lg-4">
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <span style="font-size: 4em; color:deepskyblue">
+                            <i class="fas fa-users"></i>
+                        </span></div>
+                </center>
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <p class="service-title">Social Media Marketing</p>
+                    </div>
+                </center>
+            </div>
+            <div class="col-lg-4">
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <span style="font-size: 4em; color:deepskyblue">
+                            <i class="fas fa-users-cog"></i>
+                        </span></div>
+                </center>
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <p class="service-title">Public Relations</p>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <br>
+        <center>
+            <div data-aos="zoom-in-up" data-aos-duration="2000">
+                <div id="MY-SERVICES2">I LOVE TO SHARE MY EXPERIENCE</div>
+            </div>
+        </center>
+        <div class="row">
+            <div class="col-lg-6">
+                <div data-aos="zoom-in-up" data-aos-duration="2000">
+                    <img src="utkarsh2%20(1).jpg" style="width: 100%">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <div id="clients" class="counter">500+</div><span id="clients2">CLIENTS</span>
+                    </div>
+                </center>
+                <center>
+                    <div data-aos="zoom-in-up" data-aos-duration="2000">
+                        <div id="clients">1000+</div><span id="clients2">PROJECTS</span>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <div id="contact-us">CONTACT US</div>
+        <div id="email">utkarshrajputpiyush@gmail.com</div>
+        <div id="all-rights">Copyright ©2020 All rights reserved</div>
+        <br>
+        <br>
+    </div>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="Index.html">Home</a>
+            <a href="#me">About Me</a>
+            <a href="">Sevices</a>
+        </div>
+    </div>
+</body>
+<script>
+    AOS.init();
+
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+
+</script>
+
+</html>
